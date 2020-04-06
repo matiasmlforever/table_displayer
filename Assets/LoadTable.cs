@@ -19,8 +19,6 @@ public class LoadTable : MonoBehaviour
     {
         // Add event listeners
         GetComponent<Button>().onClick.AddListener(TaskOnClick);
-
-        // Hardcoding
         LoadJson(jsonFilename);
     }
 
@@ -45,7 +43,7 @@ public class LoadTable : MonoBehaviour
     {
         loadedJson = File.ReadAllText(Application.dataPath + "/StreamingAssets/" + jsonFilename);
         jsonLoadedObject = JsonConvert.DeserializeObject<JsonLoadedTable>(loadedJson);
-
+        Debug.Log("breakpoint");
     }
 
 }
