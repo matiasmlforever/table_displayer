@@ -1,66 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7352772318873603222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7352772318873603223}
-  - component: {fileID: 7352772318873603220}
-  m_Layer: 0
-  m_Name: Row
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7352772318873603223
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7352772318873603222}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7352772319161572051}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7352772318873603220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7352772318873603222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
 --- !u!1 &7352772318985420085
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7352772318985420082}
   - component: {fileID: 7352772318985420083}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +34,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 50}
+  m_SizeDelta: {x: 1024, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7352772318985420083
 MonoBehaviour:
@@ -133,7 +72,7 @@ GameObject:
   - component: {fileID: 7352772319161572051}
   - component: {fileID: 7352772319161572050}
   - component: {fileID: 7352772319161572048}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EmptyTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,14 +92,13 @@ RectTransform:
   m_Children:
   - {fileID: 7352772319890447970}
   - {fileID: 7352772318985420082}
-  - {fileID: 7352772318873603223}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399, y: -52}
-  m_SizeDelta: {x: 800, y: 0}
+  m_AnchoredPosition: {x: 525, y: -65}
+  m_SizeDelta: {x: 1024, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7352772319161572050
 MonoBehaviour:
@@ -174,9 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b59aaef8ca12444948e643e4a25c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeadColumn: {fileID: 6844568631420595016, guid: 3e67655ccf80d234ca6618b3a426c282,
+  headColumn: {fileID: 6844568631420595016, guid: 3e67655ccf80d234ca6618b3a426c282,
     type: 3}
-  RowColumnContent: {fileID: 7168260472792263021, guid: 7fc457a58551699428d936a265d865bc,
+  rowColumnContent: {fileID: 7168260472792263021, guid: 7fc457a58551699428d936a265d865bc,
     type: 3}
 --- !u!114 &7352772319161572048
 MonoBehaviour:
@@ -196,7 +134,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -214,7 +152,7 @@ GameObject:
   - component: {fileID: 7352772319890447970}
   - component: {fileID: 7352772319890447968}
   - component: {fileID: 7352772319890447971}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +176,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 50}
+  m_SizeDelta: {x: 1024, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7352772319890447968
 CanvasRenderer:
@@ -277,7 +215,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'EL TITULO DE LA TABLA DEL MAL
 
