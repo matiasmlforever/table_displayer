@@ -1,8 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,9 +18,8 @@ public class LoadTable : MonoBehaviour
     {
         // Add event listeners
         GetComponent<Button>().onClick.AddListener(TaskOnClick);
-        table = Instantiate(tablePrefab, transform.parent, false);
         LoadJson(jsonFilename);
-        FillTable(jsonLoadedObject, table);
+        RefreshTable();
         Debug.Log("breakpoint");
 
     }
@@ -72,7 +68,9 @@ public class LoadTable : MonoBehaviour
 
     private void LoadJson()
     {
+        Destroy(table.gameObject);
         LoadJson(jsonFilename);
+        RefreshTable();
     }
 
     private void LoadJson(string jsonFilename) 
@@ -80,6 +78,12 @@ public class LoadTable : MonoBehaviour
         loadedJson = File.ReadAllText(Application.dataPath + "/StreamingAssets/" + jsonFilename);
         jsonLoadedObject = JsonConvert.DeserializeObject<JsonLoadedTable>(loadedJson);
         Debug.Log("breakpoint");
+    }
+
+    private void RefreshTable()
+    {
+        table = Instantiate(tablePrefab, transform.parent, false);
+        FillTable(jsonLoadedObject, table);
     }
 
 }
