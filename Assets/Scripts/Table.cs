@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Table : MonoBehaviour
 {
+    public GameObject headColumn;
+    public GameObject rowColumnContent;
     // Start is called before the first frame update
     void Start()
     {

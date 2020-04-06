@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class LoadTable : MonoBehaviour
 {
     public GameObject tableContainer;
+    public GameObject tablePrefab;
     public string jsonFilename;
     public string loadedJson;
     public JsonLoadedTable jsonLoadedObject;
